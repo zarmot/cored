@@ -1,0 +1,22 @@
+{
+  "name": "@crepub/cored",
+  "version": "1.1000.0",
+  "description": "simple and pure state management",
+  "license": "MIT",
+  "author": "Zarmot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zarmot/cored"
+  },
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}

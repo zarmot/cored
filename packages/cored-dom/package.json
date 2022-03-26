@@ -1,0 +1,25 @@
+{
+  "name": "cored-dom",
+  "version": "1.1000.0",
+  "description": "use cored with dom or web components",
+  "license": "MIT",
+  "author": "Zarmot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zarmot/cored"
+  },
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "@crepub/cored": "workspace:^1.1000.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
