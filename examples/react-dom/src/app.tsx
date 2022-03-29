@@ -1,15 +1,9 @@
-import { useRef, useState, useLayoutEffect } from "react"
+import { useState } from "react"
 
 import CoredExample from "./core"
 
 const App = () => {
-  const ref = useRef<HTMLDivElement | null>(null)
   const [cored] = useState(CoredExample)
-
-  useLayoutEffect(() => {
-    ref.current?.appendChild(cored.html.node)
-  }, [ref.current])
-
-  return <div ref={ref}/>
+  return <div ref={node => node?.appendChild(cored.html.node)}/>
 }
 export default App
