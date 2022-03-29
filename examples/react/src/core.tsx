@@ -1,31 +1,38 @@
-import { Action, useCore } from "cored-react"
+import { skip, useCored } from "cored-react"
 
-function Core(update: Action) {
+function Core() {
   const data = {
     value: 0
   }
-  return {
-    data,
+  const hooks = {
+    update: skip
+  }
+  const actions = {
     inc() {
       data.value += 1
-      update()
+      hooks.update()
     },
     dec() {
       data.value -= 1
-      update()
+      hooks.update()
     }
+  }
+  return {
+    data,
+    hooks,
+    actions,
   }
 }
 type Core = ReturnType<typeof Core>
 
 const Main = () => {
-  const core = useCore(Core)
+  const { data, actions } = useCored(Core)
   console.log("Render Core Main")
   return (
     <div> 
-      {core.data.value}
-      <button onClick={core.inc}>inc</button>
-      <button onClick={core.dec}>dec</button>
+      {data.value}
+      <button onClick={actions.inc}>inc</button>
+      <button onClick={actions.dec}>dec</button>
     </div>
   )
 }

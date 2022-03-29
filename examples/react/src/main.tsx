@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import "./styles.css"
-
 import Core from "./core"
 import Channel from "./channel"
 
