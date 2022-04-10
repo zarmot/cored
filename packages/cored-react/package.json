@@ -1,6 +1,6 @@
 {
   "name": "cored-react",
-  "version": "1.1100.0",
+  "version": "1.3000.0",
   "description": "use cored with react hooks",
   "license": "MIT",
   "author": "Zarmot",
@@ -17,7 +17,7 @@
     "build": "tsc -b"
   },
   "dependencies": {
-    "@crepub/cored": "workspace:^1.1100.0",
+    "@crepub/cored": "workspace:^1.3000.0",
     "react": "^17.0.2"
   },
   "devDependencies": {

@@ -35,4 +35,11 @@ export function unsubscribe(channel: Channel, index: number) {
   channel.unsubs.push(index)
 }
 
-export type Flags = Int32Array
+export type Corex = {
+  subs: Channel
+  data: {
+    bitmap: number
+  }
+}
+import * as flags from "./flags"
+export { flags }
